@@ -48,12 +48,6 @@ It applies core Design and Analysis of Algorithms (DAA) concepts to optimize stu
 * Selected courses based on constraints
 * Maximum achievable credits
 
-## Project Structure
-
-study-planner-daa/
-│── main.cpp
-│── README.md
-│── report.pdf
 
 ## Future Scope
 
@@ -62,5 +56,8 @@ study-planner-daa/
 * Integrate AI/ML for smart task prioritization
 * Add calendar integration and reminders
 
+## Project Report
+
+[View Full Report](./study-planner-daa.pdf)
 
 This project is for academic purposes.
