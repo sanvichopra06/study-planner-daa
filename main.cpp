@@ -63,14 +63,13 @@ void Planner::displayTasks() {
     }
 }
 
-// Greedy Scheduling
 void Planner::greedy() {
     Task temp[MAX];
 
     for (int i = 0; i < n; i++)
         temp[i] = tasks[i];
 
-    // Sort by credits (descending)
+    // Sort by credits descending
     for (int i = 0; i < n - 1; i++) {
         for (int j = 0; j < n - i - 1; j++) {
             if (temp[j].credits < temp[j + 1].credits) {
@@ -79,28 +78,21 @@ void Planner::greedy() {
         }
     }
 
-    int maxhours = 0;
-    for (int i = 0; i < n; i++)
-        maxhours = max(maxhours, temp[i].hours);
+    int totalHours;
+    cout << "Enter total available hours: ";
+    cin >> totalHours;
 
-    int slot[MAX];
-    for (int i = 0; i < maxhours; i++)
-        slot[i] = -1;
+    int used = 0;
+
+    cout << "Scheduled Courses:\n";
 
     for (int i = 0; i < n; i++) {
-        for (int j = temp[i].hours - 1; j >= 0; j--) {
-            if (slot[j] == -1) {
-                slot[j] = i;
-                break;
-            }
+        if (used + temp[i].hours <= totalHours) {
+            cout << temp[i].name << " ";
+            used += temp[i].hours;
         }
     }
 
-    cout << "Scheduled Courses:\n";
-    for (int i = 0; i < maxhours; i++) {
-        if (slot[i] != -1)
-            cout << temp[slot[i]].name << " ";
-    }
     cout << endl;
 }
 
