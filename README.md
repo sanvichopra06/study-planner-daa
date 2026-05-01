@@ -48,6 +48,16 @@ It applies core Design and Analysis of Algorithms (DAA) concepts to optimize stu
 * Selected courses based on constraints
 * Maximum achievable credits
 
+## Output Screenshots
+
+### Greedy Scheduling
+![Greedy](./images/greedy-output.png)
+
+### Knapsack Optimization
+![Knapsack](./images/knapsack-output.png)
+
+### Topological Sort
+![Topo](./images/topological-output.png)
 
 ## Future Scope
 
